@@ -59,6 +59,8 @@
  */
 #import "NSString+Emojize.h"
 
+#import "JPUSHService.h"
+
 @interface AppDelegate () <RESideMenuDelegate>
 @property (strong, nonatomic) CollectionViewModel *collViewModel;
 @property (strong, nonatomic) FaceImageViewModel *faceViewModel;
@@ -79,6 +81,31 @@
     return YES;
 }
 
+- (void)setupJPush:(NSDictionary *)launchOptions {
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    } else {
+        //categories 必须为nil
+        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                          UIRemoteNotificationTypeSound |
+                                                          UIRemoteNotificationTypeAlert)
+                                              categories:nil];
+    }
+    //Required
+    // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
+    [JPUSHService setupWithOption:launchOptions];
+    /*
+    [JPUSHService setupWithOption:launchOptions appKey:@"76b41171109b64787013b5f1"
+                          channel:@"App Store"
+                 apsForProduction:YES
+            advertisingIdentifier:nil];
+     */
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     IQKeyboardManager *magngerKeyboard = [IQKeyboardManager sharedManager];
@@ -97,6 +124,10 @@
     [magngerKeyboard disableToolbarInViewControllerClass:NSClassFromString(@"PostActivityInfoVC")];
 
 
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    // 极光推送
+    [self setupJPush:launchOptions];
+    
     //注册登录 退出登录
     //for test - by ximi 先把请求收藏的接口去掉
     UserModel *cUser = [UserModel currentUserInfo];
@@ -123,6 +154,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [UserModel saveToLocal];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -137,6 +169,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
@@ -150,6 +183,33 @@
     [UserModel saveToLocal];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    //Optional
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+
 
 - (void)dealloc
 {

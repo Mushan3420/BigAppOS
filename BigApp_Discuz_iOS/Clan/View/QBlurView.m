@@ -198,7 +198,7 @@
 
 - (void)dealloc{
     dispatch_source_cancel(source);
-    dispatch_release(source);
+    // dispatch_release(source);
 }
 
 @end

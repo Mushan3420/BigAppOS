@@ -3,35 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>YZSegMent</key>
-	<string>36,170,21</string>
+	<string>103, 169, 99</string>
 	<key>YZBBSName</key>
-	<string>BigApp</string>
+	<string>悠悦社区</string>
 	<key>YZBaseURL</key>
-	<string>http://bbs.bigappdemo.com</string>
+	<string>http://bbs.euyyue.com</string>
 	<key>YZBasePath</key>
 	<string>api/mobile/iyz_index.php</string>
 	<key>BIGAPPVERSION</key>
-	<string>9003</string>
+	<string>1000</string>
 	<key>APPSTYLE</key>
 	<string>1</string>
 	<key>kAPP_DOWNLOAD_URL</key>
-	<string>https://itunes.apple.com/us/app/san-ti-she-qu/id997795570?l=zh&amp;ls=1&amp;mt=8</string>
+	<string>https://itunes.apple.com/cn/app/you-yue-she-qu-you-yue-e-yu/id1054282781</string>
 	<key>OFFLINE</key>
 	<string>0</string>
 	<key>YouZuLogin</key>
 	<string>0</string>
 	<key>ShareAppkeySina</key>
-	<string>3552514107</string>
+	<string>861150897</string>
 	<key>ShareAppkeyTecent</key>
-	<string>1104768684</string>
+	<string>101194373</string>
 	<key>ShareAppkeyWechat</key>
-	<string>wxb05003635a752c53</string>
+	<string>wxd0baaade6c032883</string>
 	<key>ShareAppSecretSina</key>
-	<string>b234a863f8cfb50e4ec7c47ca0babba9</string>
+	<string>3c6be6824bc97de74eeb852436125565</string>
 	<key>ShareAppSecretWechat</key>
-	<string>1bf2e7110a83d2b1d2ce71c11f18ca36</string>
+	<string>6d0db2c95ffdc493773b05b50c5b3b09</string>
 	<key>ShareAppSecretTecent</key>
-	<string>QBWUohHz82fpd55h</string>
+	<string>f30f08a2d9da493d77682b98296ccf28</string>
 	<key>ShareAppRedirectUriSina</key>
 	<string>https://api.weibo.com/oauth2/default.html</string>
 	<key>open_image_mode</key>

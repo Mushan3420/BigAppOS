@@ -559,6 +559,7 @@ static float interval = 60.f;
 #pragma mark - Action
 - (void)sendPost:(id)btn
 {
+    /*
     YZButton *messBtn = (YZButton *)btn;
     NSInteger tag = messBtn.tag-1000;
     //微信好友
@@ -572,14 +573,19 @@ static float interval = 60.f;
     shareitemWeiXinTimeline.image = kIMG(@"shouye_huodongtie");
     shareitemWeiXinTimeline.shareType = SSDKPlatformSubTypeWechatTimeline;
     
-    NSArray *shareListArr = @[shareitemWeiXinSession, shareitemWeiXinTimeline];
+    // NSArray *shareListArr = @[shareitemWeiXinSession, shareitemWeiXinTimeline];
+    NSArray *shareListArr = @[shareitemWeiXinSession];
     ShareMenu *menu = [[ShareMenu alloc]initWithFrame:CGRectMake(0, 70, kSCREEN_WIDTH, 400) withShareList:shareListArr];
     if (tag != 3) {
         menu.startCenterX = messBtn.center.x;
     }
     menu.menuMode = MenuViewMode_FullScreen;
     [menu show];
+    */
+    //
     WEAKSELF
+    [weakSelf sendNormalPost];
+    /*
     [menu setSelectedBlock:^(id data) {
         NSNumber *type = data;
         if (type.intValue == SSDKPlatformSubTypeWechatSession) {
@@ -588,6 +594,7 @@ static float interval = 60.f;
             
         }
     }];
+     */
 }
 
 - (void)sendNormalPost

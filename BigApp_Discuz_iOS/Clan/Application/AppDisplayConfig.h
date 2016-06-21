@@ -11,7 +11,7 @@
 
 //cell标题颜色 置顶帖
 //#define K_COLOR_DARK kUIColorFromRGB(0x1d1d1d)
-#define K_COLOR_DARK kUIColorFromRGB(0x424242)
+#define K_COLOR_DARK kUIColorFromRGB(0xc99a78)
 
 #define K_COLOR_gray1 kUIColorFromRGB(0x242424)
 //浅黑
