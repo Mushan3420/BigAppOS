@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">lib_base</string>
+    <string name="z_toast_exit_app">再按一次返回键退出应用</string>
+    <!-- toast common -->
+    <string name="z_toast_input_not_null">输入内容不能为空！</string>
+    <string name="z_toast_upload_cancel">已取消上传</string>
+    <string name="z_toast_upload_success">上传成功</string>
+    <string name="z_toast_upload_fail">上传失败</string>
+    <string name="z_toast_loading_fail">加载失败</string>
+    <string name="z_toast_error_no_net">网络不可用</string>
+    <string name="z_toast_error_timeout">连接服务器超时</string>
+    <string name="z_toast_error_ununited">无法连接服务器，请检查您的网络</string>
+    <string name="z_toast_error_dataError">解析数据出错</string>
+    <string name="z_toast_error_server_error">服务器内部错误</string>
+    <string name="z_toast_error_request">请求失败</string>
+    <string name="z_toast_error_unknown">未知错误</string>
+    <string name="z_toast_error_cache">获取本地缓存失败</string>
+    <string name="z_toast_loading">加载中...</string>
+    <string name="z_toast_downloading">下载中...</string>
+    <string name="z_toast_canceling">取消中</string>
+    <string name="z_toast_deleting">删除中</string>
+    <string name="z_toast_cancel_success">取消成功</string>
+    <string name="z_toast_collect_add_success">已收藏</string>
+    <string name="z_toast_collect_add_fail">收藏失败</string>
+    <string name="z_toast_cancel_fail">取消失败</string>
+    <string name="z_toast_del_fail">删除失败</string>
+    <string name="z_toast_del_success">删除成功</string>
+    <string name="z_toast_searching">搜索中</string>
+    <string name="z_toast_collecting">收藏中</string>
+    <string name="z_toast_commiting">提交中</string>
+    <string name="z_toast_modifying">修改中</string>
+    <string name="z_toast_commit_success">提交成功</string>
+    <string name="z_toast_modify_success">修改成功</string>
+    <string name="z_toast_modify_fail">修改失败</string>
+    <string name="z_toast_collect_success">收藏成功</string>
+    <string name="z_toast_collect_fail">收藏失败</string>
+    <string name="z_toast_commit_fail">提交失败</string>
+    <string name="z_toast_name_pwd_not_null">用户名和密码不能为空</string>
+    <string name="z_toast_name_email_not_null">用户名和邮箱不能为空</string>
+    <string name="z_toast_name_email_format_error">邮箱输入格式不对</string>
+    <string name="z_toast_pwd_not_same">输入密码不一致</string>
+    <string name="z_toast_login_success">登录成功</string>
+    <string name="z_toast_loginout_success">成功退出登录</string>
+    <string name="z_toast_login_fail">登录失败</string>
+    <string name="z_toast_regist_success">注册成功</string>
+    <string name="z_toast_regist_fail">注册失败</string>
+    <string name="z_toast_search_result_nothing">沒有搜索到相关内容</string>
+    <string name="z_toast_not_allow_commit">不允许评论</string>
+    <string name="z_toast_not_allow_anony_commit">不允许匿名评论</string>
+    <string name="z_toast_not_allow_3rd_party">必须是注册用户评论</string>
+
+    <!-- drag -->
+    <string name="drag_item_mine">我的栏目</string>
+    <string name="drag_item_mine_hint">(点击可移除，长按可拖动排序)</string>
+    <string name="drag_item_more_hint">(点击可添加)</string>
+    <string name="drag_item_more">点击添加更多栏目</string>
+    <string name="drag_btn_edit">编辑</string>
+
+    <!-- btn -->
+    <string name="z_btn_logout">退出</string>
+    <string name="z_btn_confirm">确定</string>
+    <string name="z_btn_cancel">取消</string>
+    <string name="z_btn_clear">清空</string>
+    <string name="z_btn_finish">完成</string>
+    <string name="z_font_size">字体大小</string>
+    <string name="z_btn_txt_size_small">小</string>
+    <string name="z_btn_txt_size_normal">中</string>
+    <string name="z_btn_txt_size_big">大</string>
+    <string name="z_btn_txt_size_max">特大</string>
+
+    <!-- share -->
+    <string name="z_share_wechat">分享到微信</string>
+    <string name="z_share_wechat_p">分享到朋友圈</string>
+    <string name="z_share_sina">分享到微博</string>
+    <string name="z_share_qq">分享到QQ</string>
+    <string name="z_share_qq_k">分享到QQ空间</string>
+    <string name="z_share_link">复制链接</string>
+
+    <!-- img mode-->
+    <string name="z_img_mode_high">高</string>
+    <string name="z_img_mode_low">低</string>
+    <string name="z_img_mode_none">无图</string>
+
+    <!-- pic chooser -->
+    <string name="z_pic_chooser_camera">拍照</string>
+    <string name="z_pic_chooser_gallery">从相册选择</string>
+
+    <!-- 版本更新 -->
+    <string name="z_version_update_warning">版本更新提示</string>
+    <string name="z_version_download_fail">下载失败</string>
+    <string name="z_version_checking">检查更新中</string>
+    <string name="z_version_install">安装</string>
+    <string name="z_version_redownload">重新下载</string>
+    <string name="z_version_download">下载%s</string>
+    <string name="z_version_toast_no_new_version">当前已经是最新版本</string>
+    <string name="z_version_download_success">下载成功</string>
+    <string name="z_version_download_finish">下载完成</string>
+    <string name="z_version_downloading">正在下载</string>
+    <string name="z_download_offline">正在下载离线内容</string>
+    <string name="z_download_offline_fail">下载离线内容失败</string>
+    <string name="z_download_offline_read_tip">无网络信号时，您也可以浏览了</string>
+</resources>

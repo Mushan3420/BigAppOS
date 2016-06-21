@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/v_banner_height"
+    android:minHeight="@dimen/v_banner_height"
+    android:orientation="vertical">
+
+    <com.wjwu.wpmain.widget.ZImageSwitcher
+        android:id="@+id/switcher"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_banner_height" />
+
+    <com.wjwu.wpmain.widget.CircleFlowIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="10dp"
+        app:activeColor="#FFFFFF"
+        app:activeType="fill"
+        app:inactiveColor="#9D9D9D"
+        app:inactiveType="fill"
+        app:radius="4dp" />
+
+</FrameLayout>

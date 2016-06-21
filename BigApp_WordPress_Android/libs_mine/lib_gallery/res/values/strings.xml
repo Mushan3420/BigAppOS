@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">lib_gallery</string>
+    <string name="zg_content_media_pic_select">选择图片</string>
+    <string name="zg_content_media_video_select">选择视频</string>
+    <string name="zg_content_media_all_pic">所有图片</string>
+    <string name="zg_content_media_all_video">所有视频</string>
+    <string name="zg_content_media_pic_preview">图片预览</string>
+    <string name="zg_content_media_take_pic">拍照</string>
+    <string name="zg_content_media_take_video">录像</string>
+    <string name="zg_btn_finish">完成</string>
+    <string name="zg_btn_preview">预览</string>
+    <string name="zg_media_video_front">前置</string>
+    <string name="zg_media_video_back">后置</string>
+    <!-- toast -->
+    <string name="zg_toast_over_max_select_size">抱歉，一次最多只能选择%s张图片</string>
+    <string name="zg_toast_loading">加载中...</string>
+    <string name="zg_toast_media_not_found">媒体文件没找到</string>
+
+</resources>

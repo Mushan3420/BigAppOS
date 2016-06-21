@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:centerColor="@color/v_bg_progress"
+                    android:endColor="@color/v_bg_progress"
+                    android:startColor="@color/v_bg_progress" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:centerColor="@color/v_bg_progress"
+                    android:endColor="@color/v_bg_progress"
+                    android:startColor="@color/v_bg_progress" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

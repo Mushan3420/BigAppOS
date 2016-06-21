@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tv_left_menu_n">#c9c9c9</color>
+    <color name="tv_left_menu_p">#88c9c9c9</color>
+    <color name="tv_go_regist_n">#999999</color>
+    <color name="tv_go_regist_p">#88999999</color>
+    <!-- catalog -->
+    <color name="tv_catalog_n">#999999</color>
+    <color name="tv_catalog_p">#14bb5f</color>
+    <color name="v_bg_progress">#14bb5f</color>
+    <color name="tv_catalog_y_n">#666666</color>
+    <color name="tv_catalog_y_p">#ffffff</color>
+</resources>

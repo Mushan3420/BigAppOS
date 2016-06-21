@@ -1,0 +1,235 @@
+apply plugin: 'com.android.application'
+
+//打包时间
+def packageTime() {
+    return new Date().format("MM_dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    def asset = new XmlParser().parse("needs_files/params.xml");
+    def nav_color = asset.nav_color.text()
+    def app_name = asset.app_name.text()
+    def package_name = asset.package_name.text()
+    def version_name = asset.version_name.text()
+    def v_code = asset.version_code.text().toInteger()
+    def api_url = asset.api_url[0].text()
+    def store_pwd = asset.store_pwd[0].text()
+    def key_alias = asset.key_alias[0].text()
+    def key_pwd = asset.key_pwd[0].text()
+    def qq_app_id = asset.qq_app_id.text()
+    def svn_version = asset.svn_version.text()
+
+    println "" + "version_name = " + version_name + ", v_code = " + v_code + ", svn_version = " + svn_version
+
+    def key_store_path = "../needs_files/demokey.keystore"
+    def startup_img_path = "../needs_files/ic_init.png"
+    copy {
+        from "../needs_files/ic_launcher_48.png"
+        into 'build-types/release/res/mipmap-mdpi'
+        rename('ic_launcher_48.png', 'ic_launcher.png')
+    }
+    copy {
+        from "../needs_files/ic_launcher_72.png"
+        into 'build-types/release/res/mipmap-hdpi'
+        rename('ic_launcher_72.png', 'ic_launcher.png')
+    }
+    copy {
+        from "../needs_files/ic_launcher_96.png"
+        into 'build-types/release/res/mipmap-xhdpi'
+        rename('ic_launcher_96.png', 'ic_launcher.png')
+    }
+    copy {
+        from "../needs_files/ic_launcher_144.png"
+        into 'build-types/release/res/mipmap-xxhdpi'
+        rename('ic_launcher_144.png', 'ic_launcher.png')
+    }
+
+    copy {
+        from startup_img_path
+        into 'build-types/release/res/drawable-xxhdpi'
+        rename('ic_init.png', 'v_iv_launch.png')
+    }
+
+    copy {
+        from '../needs_files/ShareSDK.xml'
+        into 'build-types/release/assets'
+    }
+
+    def packages = package_name.split("[.]");
+    def wxfoulder = "src/main/java";
+    for (pack in packages) {
+        wxfoulder += "/" + pack;
+    }
+    wxfoulder += "/wxapi"
+    println "wxfoulder = " + wxfoulder;
+
+    copy {
+        from '../needs_files/WXEntryActivity.java'
+        into wxfoulder
+    }
+
+    File wxfile = new File("app/" + wxfoulder + "/WXEntryActivity.java").absoluteFile;
+    def newWxPackage = package_name + ".wxapi"
+    wxfile.write(wxfile.getText("UTF-8").replaceFirst("package com.youzu.wp.bigword.wxapi;", "package " + newWxPackage + ";"));
+    println "wxfile path = " + wxfile.absolutePath + ", newWxPackage = " + newWxPackage;
+
+    def builder = new groovy.xml.StreamingMarkupBuilder()
+    builder.encoding = "UTF-8"
+    def strings = {
+        mkp.xmlDeclaration()
+        resources {
+            string(name: "app_name", app_name)
+            string(name: "svn_version", svn_version)
+            string(name: "use_wechat", asset.use_wechat.text())
+            string(name: "use_qq", asset.use_qq.text())
+            string(name: "use_sina", asset.use_sina.text())
+        }
+    }
+    def writer = new OutputStreamWriter(new FileOutputStream("app/build-types/release/res/values/strings.xml"), "UTF-8")
+    writer << builder.bind(strings)
+    writer.close()
+
+    def strings_en = {
+        mkp.xmlDeclaration()
+        resources {
+            string(name: "app_name", app_name)
+        }
+    }
+    writer = new OutputStreamWriter(new FileOutputStream("app/build-types/release/res/values-en/strings.xml"), "UTF-8")
+    writer << builder.bind(strings_en)
+    writer.close()
+
+    def r = nav_color.substring(1, 3);
+    def g = nav_color.substring(3, 5);
+    def b = nav_color.substring(5, 7);
+
+    def colorLevel = (Integer.valueOf(r, 16) * 0.299 + Integer.valueOf(g, 16) * 0.587
+            + Integer.valueOf(b, 16) * 0.114);
+    def titleColor = "#000000";
+    def tv_catalog_p = "#14bb5f";
+    if (colorLevel < 192) { //深色
+        titleColor = "#FFFFFF"
+        tv_catalog_p = nav_color;
+        copy {
+            from "../needs_files/v_nav_back.png"
+            into 'build-types/release/res/drawable-xxhdpi'
+        }
+        copy {
+            from "../needs_files/v_iv_font.png"
+            into 'build-types/release/res/drawable-xxhdpi'
+        }
+        copy {
+            from "../needs_files/v_iv_menu.png"
+            into 'build-types/release/res/drawable-xxhdpi'
+        }
+        copy {
+            from "../needs_files/v_iv_search.png"
+            into 'build-types/release/res/drawable-xxhdpi'
+        }
+    } else {
+        if (colorLevel != 255) {
+            tv_catalog_p = "#303030";
+        }
+        delete("build-types/release/res/drawable-xxhdpi/v_nav_back.png")
+        delete("build-types/release/res/drawable-xxhdpi/v_iv_font.png")
+        delete("build-types/release/res/drawable-xxhdpi/v_iv_menu.png")
+        delete("build-types/release/res/drawable-xxhdpi/v_iv_search.png")
+    }
+
+    println("wenjun colorLevel = " + colorLevel + ", titleColor = " + titleColor + ", nav_color= " + nav_color);
+
+    def colors = {
+        mkp.xmlDeclaration()
+        resources {
+            color(name: "c_bg_title_bar", nav_color)
+            color(name: "c_txt_title_bar", titleColor)
+            color(name: "tv_catalog_p", tv_catalog_p)
+            color(name: "v_bg_progress", tv_catalog_p)
+        }
+    }
+    writer = new OutputStreamWriter(new FileOutputStream("app/build-types/release/res/values/colors.xml"), "UTF-8")
+    writer << builder.bind(colors)
+    writer.close()
+
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId package_name
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode v_code
+        versionName version_name
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(key_store_path)
+            storePassword store_pwd
+            keyAlias key_alias
+            keyPassword key_pwd
+        }
+    }
+
+    productFlavors {
+        uzwp {}
+    }
+    //批量处理
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [QQ_APPID: "tencent" + qq_app_id, Z_PROVIDER_AUTH: package_name + ".provider", WX_ENTRY_ACTIVITY: newWxPackage + ".WXEntryActivity"]
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "String", "API_HOST", "\"" + api_url + "\""//API Host
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            //// 是否进行混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    def newFileDir = new File(new File(new File(new File(new File(outputFile.parent).parent).parent).parent).parent, "/outputs");
+                    if (!newFileDir.exists()) {
+                        newFileDir.mkdir();
+                    }
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = app_name + "_" + version_name + "_" + packageTime() + ".apk"
+                        output.outputFile = new File(newFileDir, "bigApp_wp.apk")
+                    }
+                }
+            }
+        }
+        debug {
+            buildConfigField "String", "API_HOST", "\"" + api_url + "\""//API Host
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+        }
+        qatest {
+            buildConfigField "String", "API_HOST", "\"" + api_url + "\""//API Host
+            signingConfig signingConfigs.release
+            versionNameSuffix "_530"
+            applicationIdSuffix ".qatest"
+            zipAlignEnabled true
+        }
+    }
+
+    sourceSets {
+        debug.setRoot('build-types/debug')
+        qatest.setRoot('build-types/qatest')
+        release.setRoot('build-types/release')
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(":libs_mine:lib_gallery")
+}

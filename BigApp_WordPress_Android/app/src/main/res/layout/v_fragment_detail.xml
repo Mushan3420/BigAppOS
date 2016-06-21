@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pb_line"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:background="?attr/c_bg_progress_h"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progressDrawable="@drawable/z_progress_bar_line" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?attr/c_bg_topic_desc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/tv_show_orgin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="16dp"
+                android:text="@string/v_show_orgin"
+                android:textSize="9sp"
+                android:visibility="gone" />
+
+            <com.wjwu.wpmain.widget.NestGridView
+                android:id="@+id/gv_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:fadeScrollbars="false"
+                android:fastScrollEnabled="false"
+                android:horizontalSpacing="8dp"
+                android:listSelector="@drawable/z_item_bg"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="8dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/c_bg_topic_comment_desc"
+                android:orientation="vertical"
+                android:paddingEnd="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/tv_newest_commit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/v_detail_newest_commit"
+                    android:textColor="?attr/c_txt_topic_comment_pl"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/ll_line_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="?attr/c_bg_line"
+                    android:visibility="gone" />
+
+                <com.wjwu.wpmain.widget.NestListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:cacheColorHint="#00000000"
+                    android:divider="?attr/c_bg_line"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="#00000000"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="?attr/c_txt_topic_comment_item_desc"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/c_bg_bar_line"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ll_bottom"
+        layout="@layout/v_layout_send_commit"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UZWP</string>
+
+    <!-- 侧边栏 -->
+    <string name="v_left_menu_login">Hello, login plz</string>
+    <string name="v_left_menu_home">Home</string>
+    <string name="v_left_menu_collect">MY COLLECTIONS</string>
+    <string name="v_left_menu_commit">MY COMMENTS</string>
+    <string name="v_left_menu_setting">Settings</string>
+
+</resources>

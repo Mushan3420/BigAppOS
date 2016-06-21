@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">BigApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_main_sliding">ActivityMainSliding</string>
+
+    <string name="v_history_read_item_tiem">%1$s 您阅读了%2$s条</string>
+    <string name="v_webview_click_download_img">点击下载</string>
+
+    <string name="svn_version">999</string>
+    <string name="use_wechat">1</string>
+    <string name="use_qq">1</string>
+    <string name="use_sina">1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- debug warning -->
+    <string name="v_debug_warning">提示</string>
+    <string name="v_debug_btn_known">知道了</string>
+    <string name="v_debug_warning_info">您正在使用的版本为测试版，如需提交应用市场请上传您的Keystore文件重新签名打包APP</string>
+
+    <!-- 侧边栏 -->
+    <string name="v_left_menu_login">您好，请登录</string>
+    <string name="v_left_menu_home">首页</string>
+    <string name="v_left_menu_collect">我的收藏</string>
+    <string name="v_left_menu_commit">我的评论</string>
+    <string name="v_left_menu_history_read">历史阅读</string>
+    <string name="v_left_menu_setting">设置</string>
+    <string name="v_about_item_check_version">检查更新</string>
+    <string name="v_left_menu_user">个人资料</string>
+    <!-- 登录-->
+    <string name="v_hint_login_username">用户名/邮箱</string>
+    <string name="v_hint_username">用户名</string>
+    <string name="v_hint_option">（选填）</string>
+    <string name="v_hint_email">邮箱</string>
+    <string name="v_hint_login_pwd">密码</string>
+    <string name="v_hint_modify_pwd_old">旧密码</string>
+    <string name="v_hint_modify_pwd_new">新密码</string>
+    <string name="v_hint_modify_pwd_confirm">确认密码</string>
+    <string name="v_hint_login_pwd_confirm">确认密码</string>
+    <string name="v_login_go_regist">创建BIG账号</string>
+    <string name="v_login_go_forget">忘记密码？</string>
+    <string name="v_commit">提交</string>
+    <string name="v_login">登录</string>
+    <string name="v_regist">注册</string>
+    <string name="v_version">当前版本：%s</string>
+    <string name="v_login_verb">去登录</string>
+    <string name="v_regist_verb">去注册</string>
+    <string name="v_tip_third_login_bind">您尚未绑定账号，请使用现有账号登录绑定，或者注册新账号绑定</string>
+    <string name="v_toast_login_ing">登录中</string>
+    <string name="v_toast_regist_ing">注册中</string>
+    <string name="v_toast_third_sso_fail">授权失败</string>
+    <string name="v_toast_third_sso_cancel">授权已取消</string>
+    <!-- item setting-->
+    <string name="v_setting_item_clear_cache">清除缓存</string>
+    <string name="v_setting_item_other">其它</string>
+    <string name="v_setting_item_about">关于我们</string>
+    <string name="v_setting_item_offline_download">离线下载</string>
+    <string name="v_setting_item_font_size">字体设置</string>
+    <string name="v_setting_item_img_mode">图片模式</string>
+    <string name="v_setting_item_moon_toggle">夜间模式</string>
+    <!-- 搜索界面 -->
+    <string name="v_search_clear_history">清空搜索记录</string>
+    <string name="v_search_hint">搜索内容</string>
+    <string name="v_search_history_empty">空</string>
+    <string name="v_search_item_history">搜索历史</string>
+    <string name="v_search_item_hot_tags">热门标签</string>
+    <!-- 详情页 -->
+    <string name="v_show_orgin">阅读原文</string>
+    <string name="v_detail_newest_commit">评论</string>
+    <string name="v_detail_send_commit">发表评论</string>
+    <string name="v_detail_no_more_commit">暂无评论</string>
+    <string name="v_detail_show_all_commit">查看更多评论</string>
+    <string name="v_detail_commit_more">展开</string>
+    <string name="v_detail_commit_less">收起</string>
+    <string name="v_tip_del_commit">你确定删除该评论么？</string>
+    <string name="v_tip_del_history_read">你确定删除该历史么？</string>
+    <string name="v_tip_clear_history_read">你确定清空所有阅读历史么？</string>
+    <string name="v_tip_clear_annony_collect">你确定清空所有匿名收藏么？</string>
+    <string name="v_tip_del_collect">你确定取消该收藏么？</string>
+    <string name="v_title_edit_commit">写评论</string>
+    <string name="v_home_item_comment_str">阅读%1$s.评论%2$s.</string>
+    <!-- 描述文案 -->
+    <string name="v_content_about"></string>
+    <!-- toast -->
+    <string name="v_toast_clean_cache_ing">清除缓存中</string>
+    <string name="v_toast_clean_cache_success">清除缓存成功</string>
+    <string name="v_toast_copy_success">复制成功</string>
+    <string name="v_toast_no_wechat">请先安装微信app</string>
+    <!-- 个人中心 -->
+    <string name="v_user_avatar">头像</string>
+    <string name="v_user_nick_name">昵称</string>
+    <string name="v_user_description">个人说明</string>
+    <string name="v_user_edit_pwd">修改密码</string>
+    <string name="v_user_edit_nick_name">修改昵称</string>
+    <string name="v_user_edit_description">修改个人说明</string>
+
+</resources>

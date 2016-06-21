@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wjwu.wpmain.uzwp"
+    android:versionCode="1"
+    android:versionName="0.1.0.0_520">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- mob share sdk -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.wjwu.wpmain.uzwp.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.ActivityMainSliding"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.login.ActivityLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityThemeAnimUpDown" />
+        <activity
+            android:name="com.wjwu.wpmain.drag_tab.CatalogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityThemeAnimUpDown" />
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.search.ActivitySearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityThemeResize" />
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.detail.ActivityDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name="com.wjwu.wpmain.uzwp.detail.ActivityDetailsMore"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name="com.wjwu.wpmain.user.ActivityUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name="com.wjwu.wpmain.user.ActivityUserMore"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name="net.ag.lib.gallery.ui.MediaPreviewCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name="net.ag.lib.gallery.ui.MediaPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <service android:name="com.wjwu.wpmain.doffline.ServiceOfflineDownload" />
+        <service android:name="com.wjwu.wpmain.uzwp.login.ServiceSyncAfterLogin" />
+
+        <receiver android:name="com.wjwu.wp.main.versionupdate.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.wjwu.wpmain.cache.DbContentProvider"
+            android:authorities="${Z_PROVIDER_AUTH}" />
+
+        <meta-data
+            android:name="provider_authorities"
+            android:value="${Z_PROVIDER_AUTH}" />
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="${WX_ENTRY_ACTIVITY}"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ShareSDK -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="${QQ_APPID}" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

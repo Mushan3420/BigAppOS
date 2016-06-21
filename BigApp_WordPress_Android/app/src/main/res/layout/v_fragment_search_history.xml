@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tag"
+        style="@style/TV_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/c_bg_home"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/v_search_item_hot_tags"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/v_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/c_bg_line"
+        android:visibility="gone" />
+
+    <com.wjwu.wpmain.widget.NestGridView
+        android:id="@+id/gv_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fadeScrollbars="false"
+        android:fastScrollEnabled="false"
+        android:horizontalSpacing="8dp"
+        android:listSelector="@drawable/z_item_bg"
+        android:numColumns="4"
+        android:paddingBottom="15dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/v_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/c_bg_line" />
+
+    <TextView
+        android:id="@+id/tv_item_search_history"
+        style="@style/TV_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/c_bg_home"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/v_search_item_history" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/c_bg_line" />
+
+    <ListView
+        android:id="@id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="?attr/c_bg_line"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        style="@style/TV_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/v_search_history_empty" />
+
+</LinearLayout>

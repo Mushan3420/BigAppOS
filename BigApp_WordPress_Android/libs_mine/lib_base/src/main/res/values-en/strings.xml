@@ -1,0 +1,5 @@
+<resources>
+    <!-- 侧边栏 -->
+    <string name="z_btn_logout">logout</string>
+
+</resources>

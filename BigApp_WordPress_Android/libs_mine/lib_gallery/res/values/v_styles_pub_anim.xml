@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AnimLeftRight" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/v_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/v_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/v_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/v_right_out</item>
+    </style>
+
+    <style name="AnimActivityEnterExit" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/v_popup_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/v_popup_exit</item>
+    </style>
+
+    <style name="AnimUpDown" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/v_roll_up</item>
+        <item name="android:windowExitAnimation">@anim/v_roll_down</item>
+    </style>
+
+    <style name="AnimEnterExit" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/v_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/v_popup_exit</item>
+    </style>
+
+    <style name="AnimZoomInOut" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/v_zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/v_zoom_out</item>
+    </style>
+
+    <style name="AnimZoomDropDown" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/v_zoom_in_dropdown</item>
+        <item name="android:windowExitAnimation">@anim/v_zoom_out_dropdown</item>
+    </style>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- colors -->
+    <!-- bg home -->
+    <attr name="c_bg_title_bar" format="color" />
+    <attr name="c_bg_search_bar" format="color" />
+    <attr name="c_bg_catalog" format="color" />
+    <attr name="c_bg_home" format="color" />
+    <attr name="c_bg_home_zht" format="color" />
+    <attr name="c_bg_commit_anony" format="color" />
+    <attr name="c_bg_list_selector" format="color|reference" />
+    <!-- -->
+    <attr name="c_bg_line" format="color" />
+    <attr name="c_bg_line_commit" format="color" />
+    <attr name="c_bg_bar_line" format="color" />
+    <attr name="c_bg_line_home_catalog" format="color" />
+    <attr name="c_bg_progress_h" format="color" />
+    <!-- bg desc -->
+    <attr name="c_bg_topic_comment_desc" format="color" />
+    <attr name="c_bg_topic_tag" format="color" />
+    <attr name="c_bg_topic_bottom_bar" format="color" />
+    <!-- txt home -->
+    <attr name="c_txt_title_bar" format="color" />
+    <attr name="c_txt_catalog" format="color" />
+    <attr name="c_txt_home_item_title" format="color" />
+    <attr name="c_txt_home_item_desc" format="color" />
+    <attr name="c_txt_home_item_time" format="color" />
+    <attr name="c_txt_item_comment_num" format="color" />
+    <!-- txt desc -->
+    <attr name="c_txt_topic_comment_pl" format="color" />
+    <attr name="c_txt_topic_comment_item_name" format="color" />
+    <attr name="c_txt_topic_comment_item_time" format="color" />
+    <attr name="c_txt_topic_comment_item_desc" format="color" />
+    <attr name="c_txt_topic_bottom_bar" format="color" />
+
+    <!-- listview -->
+    <attr name="d_listview_divider_height" format="dimension" />
+    <attr name="d_listview_divider_color" format="color|reference" />
+    <attr name="d_listview_divider_color_full" format="color|reference" />
+
+    <!-- webview -->
+    <attr name="s_web_bg" format="string" />
+    <attr name="s_web_txt_c" format="string" />
+    <attr name="c_txt_topic_desc_content" format="color" />
+    <attr name="c_bg_topic_desc" format="color" />
+    <attr name="c_bg_topic_desc_link" format="color" />
+    <attr name="c_bg_topic_desc_link_str" format="string" />
+
+    <!-- drawable  -->
+    <attr name="img_catagory_add" format="color|reference" />
+    <attr name="img_title_bar_menu" format="color|reference" />
+    <attr name="img_title_bar_search" format="color|reference" />
+    <attr name="img_title_bar_search_s" format="color|reference" />
+    <attr name="img_show_default" format="color|reference" />
+    <attr name="img_shape_circle_user" format="color|reference" />
+    <attr name="img_shape_commit_my_title" format="color|reference" />
+    <attr name="img_nav_back" format="color|reference" />
+    <attr name="img_nav_font" format="color|reference" />
+</resources>

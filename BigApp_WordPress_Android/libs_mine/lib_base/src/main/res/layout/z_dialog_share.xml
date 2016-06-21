@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C9C9C9"
+        android:horizontalSpacing="0.5dp"
+        android:listSelector="@drawable/z_item_bg"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0.5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#C9C9C9" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/z_item_bg"
+        android:gravity="center"
+        android:text="@string/z_btn_cancel"
+        android:textColor="#303030"
+        android:textSize="14dp" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="z_bg_layout">#FAFAFA</color>
+    <color name="z_bg_titlebar">#FFFFFF</color>
+    <color name="z_bg_dialog">#FFFFFF</color>
+    <color name="z_txt_title_bar">#000000</color>
+    <color name="z_txt_search_bar_n">#54D584</color>
+    <color name="z_txt_search_bar_p">#8854D584</color>
+    <color name="z_txt_search_bar_d">#999999</color>
+    <color name="z_btn_title_bar_bg_n">#00000000</color>
+    <color name="z_btn_title_bar_bg_p">#22000000</color>
+    <color name="z_bg_list_selector_n">#FFFFFF</color>
+    <color name="z_bg_list_selector_p">#f7fcfa</color>
+    <color name="z_bg_list_selector_n_y">#323232</color>
+    <color name="z_bg_list_selector_p_y">#2e2e2e</color>
+    <color name="z_btn_share_bg_p">#FAFAFA</color>
+    <color name="z_btn_share_bg_n">#FFFFFF</color>
+    <color name="z_btn_title_bar_txt_d_n">#ff0000</color>
+    <color name="z_btn_title_bar_txt_d_p">#ffff00</color>
+    <color name="z_btn_title_bar_txt_d_d">#999999</color>
+    <color name="z_btn_send_commit_n">#c2c2c2</color>
+    <color name="z_btn_send_commit_p">#88c2c2c2</color>
+    <color name="z_btn_title_txt_bar">@color/z_btn_txt_title_bar_default</color>
+    <color name="z_txt_hint">#999999</color>
+    <color name="z_txt_input">#333333</color>
+    <color name="z_txt_normal">#666666</color>
+    <color name="z_btn_p">#EA8B32</color>
+    <color name="z_btn_d">#999999</color>
+
+    <!-- sliding tab -->
+    <dimen name="z_slidingtab_height">39dp</dimen>
+    <!-- 大中小 开关-->
+    <color name="z_btn_txt_size_choice_n">#3D90D8</color>
+    <color name="z_btn_txt_size_choice_p">#FFFFFF</color>
+    <!-- btn -->
+    <color name="z_btn_inner_n">#fafafa</color>
+    <color name="z_btn_inner_p">#e8e8e8</color>
+    <!-- listview -->
+    <color name="z_listview_divider_color_y">#252525</color>
+    <color name="z_listview_divider_color">#D5D5D5</color>
+</resources>

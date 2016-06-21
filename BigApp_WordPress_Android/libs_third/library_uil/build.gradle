@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 5
+        targetSdkVersion 21
+        versionCode 40
+        versionName "1.9.5"
+    }
+
+}
+

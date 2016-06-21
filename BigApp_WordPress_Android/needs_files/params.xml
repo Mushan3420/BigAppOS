@@ -1,0 +1,25 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<Asset>
+    <!-- nav bar的颜色 -->
+    <nav_color>#FFFFFF</nav_color>
+    <!-- app的名称 -->
+    <app_name>bigApp</app_name>
+    <!-- app的包名 -->
+    <package_name>com.youzu.wp.bigword</package_name>
+    <!-- 版本号 -->
+    <version_name>1.0.1</version_name>
+    <version_code>101</version_code>
+    <svn_version>6719</svn_version>
+    <!-- 您的站点地址 -->
+    <api_url>http://wp.bigappdemo.com/</api_url>
+    <!-- keystore 相关信息 -->
+    <store_pwd>123456</store_pwd>
+    <key_alias>demokey.keystore</key_alias>
+    <key_pwd>123456</key_pwd>
+    <!-- 使用QQ分享时用到的app_id-->
+    <qq_app_id>1104849854</qq_app_id>
+    <!-- 分享到qq、sina、微信;1代表启用，0代表不启用-->
+    <use_qq>1</use_qq>
+    <use_sina>1</use_sina>
+    <use_wechat>1</use_wechat>
+</Asset>

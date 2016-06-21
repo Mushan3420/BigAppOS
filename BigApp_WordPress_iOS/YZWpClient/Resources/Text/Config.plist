@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>QQAppId</key>
+	<string>1104849854</string>
+	<key>QQAppSecret</key>
+	<string>h5vcW1xNPt6qxBdK</string>
+	<key>appBundleId</key>
+	<string>com.youzu.bigwords.sit</string>
+	<key>appDispalyName</key>
+	<string>BigWord</string>
+	<key>appHttpServer</key>
+	<string>http://wp.bigappdemo.com</string>
+	<key>appNavigationbarColor</key>
+	<string>#3191E7</string>
+	<key>appVersion</key>
+	<string>1.0.3</string>
+	<key>wechatAppId</key>
+	<string>wxf9a41e46b0ab3dcc</string>
+	<key>wechatAppSecret</key>
+	<string>0374a10696524380bf93bd90c7748218</string>
+	<key>weiboAppKey</key>
+	<string>1361202962</string>
+	<key>weiboAppSecret</key>
+	<string>835bc10f06d7b6feda3a3b4bd3087473</string>
+	<key>weiboRedirectUri</key>
+	<string>https://api.weibo.com/oauth2/default.html</string>
+</dict>
+</plist>

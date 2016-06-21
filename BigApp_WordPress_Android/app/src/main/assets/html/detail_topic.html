@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width; initial-scale=1.0; maximum-scale=1.0;user-scalable=no;">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script language="JavaScript" type="text/javascript">
+        function initWebContent() {
+            document.getElementById('h1_title').innerHTML = window.topic.getTitle();
+            document.getElementById('p_time').innerHTML = window.topic.getTime();
+            document.getElementById('div_content').innerHTML = window.topic.getContent();
+            setFirstImage();
+        }
+        function setFirstImage(){
+            var arrayImg = document.getElementsByTagName('img');
+            window.topic.setFirstImage(arrayImg[0].src);
+            for(var item in arrayImg) {
+                if (arrayImg[item].src.substring(arrayImg[item].src.lastIndexOf(".") + 1, arrayImg[item].src.length) != "gif") {
+                    window.topic.setFirstImage(arrayImg[item].src);
+                    break;
+                }
+            }
+            for(var item in arrayImg) {
+                var parent = arrayImg[item].parentNode;
+                if (parent.hasAttribute("href")) {
+                    parent.setAttribute("href", "javascript:void(0)");
+                }
+                arrayImg[item].setAttribute("onclick", "load_img(this)");
+            }
+        }
+        function load_theme(bgc, txtc){
+            document.getElementsByTagName('body')[0].style.webkitTextFillColor = txtc;
+            document.getElementsByTagName('body')[0].style.background = bgc;
+        }
+        function load_img(obj) {
+            var ori_link = obj.getAttribute("ori_link");
+            var ori_ing = obj.getAttribute("ori_ing");
+            var tmp = obj.getAttribute("src");
+            if (ori_link == null || ori_link == tmp) {
+                window.topic.onImageClick(tmp);
+            } else {
+                obj.src = ori_ing;
+                obj.src = ori_link;
+                window.topic.setImageSrc(ori_link, tmp, obj.src);
+            }
+        }
+    </script>
+</head>
+
+<body onload="initWebContent()">
+<h1 id="h1_title"></h1>
+
+<p id="p_time"></p>
+
+<div id="div_content"></div>
+</body>
+</html>

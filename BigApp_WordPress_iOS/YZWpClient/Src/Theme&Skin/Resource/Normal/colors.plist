@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>toolBarColor</key>
+	<string>ffffff</string>
+	<key>navBarColor</key>
+	<string>ffffff</string>
+	<key>navTintColor</key>
+	<string>000000</string>
+	<key>navTitleColor</key>
+	<string>000000</string>
+	<key>searchBarColor</key>
+	<string>ffffff</string>
+	<key>viewBackgroudColor</key>
+	<string>ffffff</string>
+	<key>detailCellBackgroudColor</key>
+	<string>fafafa</string>
+	<key>detailCellTextColor</key>
+	<string>282828</string>
+	<key>detailCellDetailTextColor</key>
+	<string>999999</string>
+	<key>detailCellTimeTextColor</key>
+	<string>000000</string>
+	<key>detailCellSeperColor</key>
+	<string>cacaca</string>
+	<key>detailWebViewBackgroudColor</key>
+	<string>ffffff</string>
+	<key>detailWebViewTextColor</key>
+	<string>000000</string>
+	<key>detailCellSectionBackgroudColor</key>
+	<string>fafafa</string>
+	<key>detailCellSectionTextColor</key>
+	<string>999999</string>
+	<key>detailSegmentTintColor</key>
+	<string>3191d5</string>
+	<key>mainCellBackgroudColor</key>
+	<string>ffffff</string>
+	<key>mainCellSelectBackgroudColor</key>
+	<string>f7fcfa</string>
+	<key>mainCellTitleColor</key>
+	<string>303030</string>
+	<key>mainCellDetailTitleColor</key>
+	<string>7a7a7a</string>
+	<key>mainCellTimeColor</key>
+	<string>7a7a7a</string>
+	<key>mainCellSeperatorColor</key>
+	<string>2e2e2e</string>
+	<key>mainTopBackgroudColor</key>
+	<string>fbfbfb</string>
+	<key>mainTopTextColor</key>
+	<string>999999</string>
+	<key>mainToptextSelectColor</key>
+	<string>6ab177</string>
+</dict>
+</plist>

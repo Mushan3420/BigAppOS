@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/z_bg_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp" />
+
+            <include layout="@layout/z_layout_line" />
+
+            <include
+                android:id="@+id/item_clear_cache"
+                layout="@layout/z_layout_setting_item_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/z_layout_line" />
+
+            <include
+                android:id="@+id/item_offline_download"
+                layout="@layout/z_layout_setting_item_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/z_layout_line" />
+
+            <include
+                android:id="@+id/item_about"
+                layout="@layout/z_layout_setting_item_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/z_layout_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/v_setting_item_other"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <include
+                android:id="@+id/item_font_size"
+                layout="@layout/z_layout_setting_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/item_img_mode"
+                layout="@layout/z_layout_setting_item_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/z_layout_line" />
+
+            <include
+                android:id="@+id/item_moon_toggle"
+                layout="@layout/z_layout_setting_item_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/z_layout_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_version"-->
+    <!--style="@style/TV_version_code"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:gravity="center" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_svn_version"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/tv_version"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:text="@string/svn_version"-->
+    <!--android:textColor="#AAAAAA"-->
+    <!--android:textSize="9sp" />-->
+
+    <!--</RelativeLayout>-->
+</LinearLayout>

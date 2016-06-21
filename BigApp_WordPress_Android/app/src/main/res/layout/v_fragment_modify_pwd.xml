@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/c_bg_home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            android:background="?attr/c_bg_line" />
+
+        <EditText
+            android:id="@+id/et_old_pwd"
+            style="@style/ET_comment_nobody"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/c_bg_commit_anony"
+            android:hint="@string/v_hint_modify_pwd_old"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="28dp"
+            android:paddingRight="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="28dp"
+            android:background="?attr/c_bg_line" />
+
+        <EditText
+            android:id="@+id/et_new_pwd"
+            style="@style/ET_comment_nobody"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/c_bg_commit_anony"
+            android:hint="@string/v_hint_modify_pwd_new"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="28dp"
+            android:paddingRight="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="28dp"
+            android:background="?attr/c_bg_line" />
+
+        <EditText
+            android:id="@+id/et_new_pwd_2"
+            style="@style/ET_comment_nobody"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/c_bg_commit_anony"
+            android:hint="@string/v_hint_modify_pwd_confirm"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="28dp"
+            android:paddingRight="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="?attr/c_bg_line" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/z_btn_send_commit_bg"
+            android:scaleType="center"
+            android:src="@drawable/z_iv_confirm_commit" />
+    </LinearLayout>
+</ScrollView>

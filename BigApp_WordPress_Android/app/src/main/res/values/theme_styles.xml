@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ActivityTheme" parent="ThemeDay">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/AnimLeftRight</item>
+    </style>
+
+    <style name="ActivityThemeMoon" parent="ThemeNight">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/AnimLeftRight</item>
+    </style>
+
+    <style name="ActivityThemeResize" parent="ThemeDay">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/AnimLeftRight</item>
+    </style>
+
+    <style name="ActivityThemeResizeMoon" parent="ThemeNight">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/AnimLeftRight</item>
+    </style>
+
+    <style name="ActivityThemeAnimUpDown" parent="ThemeDay">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/AnimUpDown</item>
+    </style>
+
+    <style name="ActivityThemeAnimUpDownMoon" parent="ThemeNight">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/AnimUpDown</item>
+    </style>
+
+    <style name="ActivityThemeAnimUpDownResize" parent="ThemeDay">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/AnimUpDown</item>
+    </style>
+
+    <style name="ActivityThemeAnimUpDownResizeMoon" parent="ThemeNight">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/AnimUpDown</item>
+    </style>
+
+    <style name="ThemeDay" parent="AppTheme">
+        <!-- bg -->
+        <item name="c_bg_line">#d5d5d5</item>
+        <item name="c_bg_line_commit">#d5d5d5</item>
+        <item name="c_bg_bar_line">#d5d5d5</item>
+        <item name="c_bg_line_home_catalog">#d5d5d5</item>
+        <item name="c_bg_progress_h">#F0F0F0</item>
+        <item name="c_bg_title_bar">@color/c_bg_title_bar</item>
+        <item name="c_bg_search_bar">#FFFFFF</item>
+        <item name="c_bg_catalog">#fcfbfb</item>
+        <item name="c_bg_home">#FAFAFA</item>
+        <item name="c_bg_home_zht">#E5E9EA</item>
+        <item name="c_bg_commit_anony">#FFFFFF</item>
+        <item name="c_bg_topic_comment_desc">#fafafa</item>
+        <item name="c_bg_topic_tag">#F7F7F7</item>
+        <item name="c_bg_topic_bottom_bar">#fdfdfd</item>
+        <item name="c_bg_list_selector">@drawable/z_bg_list_selector</item>
+        <!-- txt -->
+        <item name="c_txt_title_bar">@color/c_txt_title_bar</item>
+        <item name="c_txt_catalog">@color/v_tv_catalog</item>
+        <item name="c_txt_home_item_title">#303030</item>
+        <item name="c_txt_home_item_desc">#999999</item>
+        <item name="c_txt_home_item_time">#d5d5d5</item>
+        <item name="c_txt_topic_comment_pl">#999999</item>
+        <item name="c_txt_topic_comment_item_name">#303030</item>
+        <item name="c_txt_topic_comment_item_time">#999999</item>
+        <item name="c_txt_topic_comment_item_desc">#999999</item>
+        <item name="c_txt_topic_bottom_bar">#999999</item>
+        <item name="c_txt_item_comment_num">#7a7a7a</item>
+        <!-- drawable  -->
+        <item name="img_catagory_add">@drawable/z_iv_add</item>
+        <item name="img_title_bar_menu">@drawable/v_iv_menu</item>
+        <item name="img_title_bar_search">@drawable/v_iv_search</item>
+        <item name="img_title_bar_search_s">@drawable/v_iv_search_s</item>
+        <item name="img_show_default">@drawable/z_iv_default</item>
+        <item name="img_shape_circle_user">@drawable/v_shape_circle_user</item>
+        <item name="img_shape_commit_my_title">@drawable/z_shape_commit_my_title</item>
+        <item name="img_nav_back">@drawable/v_nav_back</item>
+        <item name="img_nav_font">@drawable/v_iv_font</item>
+        <!-- webview -->
+        <item name="s_web_bg">#FFFFFF</item>
+        <item name="s_web_txt_c">#303030</item>
+        <item name="c_txt_topic_desc_content">#303030</item>
+        <item name="c_bg_topic_desc">#ffffff</item>
+        <item name="c_bg_topic_desc_link">#ffffff</item>
+        <item name="c_bg_topic_desc_link_str">#ffffff</item>
+        <!-- listview -->
+        <item name="d_listview_divider_height">0.5dp</item>
+        <item name="d_listview_divider_color">@drawable/z_divider</item>
+        <item name="d_listview_divider_color_full">@color/z_listview_divider_color</item>
+    </style>
+
+    <style name="ThemeNight" parent="AppTheme">
+        <!-- bg -->
+        <item name="c_bg_line">#252525</item>
+        <item name="c_bg_line_commit">#3b3b3b</item>
+        <item name="c_bg_bar_line">#323232</item>
+        <item name="c_bg_line_home_catalog">#00000000</item>
+        <item name="c_bg_progress_h">#4E4E4E</item>
+        <item name="c_bg_title_bar">@color/c_bg_title_bar_y</item>
+        <item name="c_bg_search_bar">#252525</item>
+        <item name="c_bg_catalog">#2e2e2e</item>
+        <item name="c_bg_home">#2e2e2e</item>
+        <item name="c_bg_home_zht">#2e2e2e</item>
+        <item name="c_bg_commit_anony">#323232</item>
+        <item name="c_bg_topic_comment_desc">#1e1e1e</item>
+        <item name="c_bg_topic_tag">#1e1e1e</item>
+        <item name="c_bg_topic_bottom_bar">#323232</item>
+        <item name="c_bg_list_selector">@drawable/z_bg_list_selector_y</item>
+        <!-- txt -->
+        <item name="c_txt_title_bar">@color/c_txt_title_bar_y</item>
+        <item name="c_txt_catalog">@color/v_tv_catalog_y</item>
+        <item name="c_txt_home_item_title">#c9cbcd</item>
+        <item name="c_txt_home_item_desc">#999999</item>
+        <item name="c_txt_home_item_time">#666666</item>
+        <item name="c_txt_topic_comment_pl">#666666</item>
+        <item name="c_txt_topic_comment_item_name">#666666</item>
+        <item name="c_txt_topic_comment_item_time">#999999</item>
+        <item name="c_txt_topic_comment_item_desc">#666666</item>
+        <item name="c_txt_topic_bottom_bar">#666666</item>
+        <item name="c_txt_item_comment_num">#999999</item>
+        <!-- drawable  -->
+        <item name="img_catagory_add">@drawable/z_iv_add_y</item>
+        <item name="img_title_bar_menu">@drawable/z_iv_menu_y</item>
+        <item name="img_title_bar_search">@drawable/z_iv_search_y</item>
+        <item name="img_title_bar_search_s">@drawable/z_iv_search_y</item>
+        <item name="img_show_default">@drawable/z_iv_default_y</item>
+        <item name="img_shape_circle_user">@drawable/v_shape_circle_user_y</item>
+        <item name="img_shape_commit_my_title">@drawable/z_shape_commit_my_title_y</item>
+        <item name="img_nav_back">@drawable/v_nav_back_y</item>
+        <item name="img_nav_font">@drawable/v_iv_font_y</item>
+        <!-- webview -->
+        <item name="s_web_bg">#323232</item>
+        <item name="s_web_txt_c">#c9c8cd</item>
+        <item name="c_bg_topic_desc">#323232</item>
+        <item name="c_txt_topic_desc_content">#c9c8cd</item>
+        <item name="c_bg_topic_desc_link">#88000000</item>
+        <item name="c_bg_topic_desc_link_str">#88000000</item>
+        <!-- listview -->
+        <item name="d_listview_divider_height">0.5dp</item>
+        <item name="d_listview_divider_color">@drawable/z_divider_y</item>
+        <item name="d_listview_divider_color_full">@color/z_listview_divider_color_y</item>
+    </style>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/c_bg_home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            android:background="?attr/c_bg_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="?attr/c_bg_commit_anony">
+
+            <EditText
+                android:id="@+id/et_description"
+                style="@style/ET_reply_nobody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top"
+                android:imeOptions="actionNone"
+                android:inputType="textMultiLine"
+                android:padding="5dp">
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="?attr/c_bg_line" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/z_btn_send_commit_bg"
+            android:scaleType="center"
+            android:src="@drawable/z_iv_confirm_commit" />
+    </LinearLayout>
+</ScrollView>

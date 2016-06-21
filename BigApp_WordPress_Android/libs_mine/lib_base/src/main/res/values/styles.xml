@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@null</item>
+        <!-- 自己想要的背景 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="Dialog_General" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/z_bg_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Btn_45">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textColor">#303030</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Btn_green_45" parent="Btn_45">
+        <item name="android:background">@drawable/z_btn_green_45</item>
+    </style>
+
+    <style name="Btn_gray_45" parent="Btn_45">
+        <item name="android:background">@drawable/z_btn_gray_45</item>
+    </style>
+
+    <style name="Btn_gray_45_z" parent="Btn_45">
+        <item name="android:background">@drawable/z_btn_gray_45_z</item>
+    </style>
+
+    <style name="ET_search">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/c_txt_topic_comment_item_name</item>
+        <item name="android:textColorHint">?attr/c_txt_topic_bottom_bar</item>
+    </style>
+
+    <style name="ET_reply">
+        <item name="android:singleLine">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#303030</item>
+        <item name="android:textColorHint">#999999</item>
+    </style>
+
+    <style name="ET_reply_nobody">
+        <item name="android:singleLine">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/c_txt_topic_comment_item_name</item>
+        <item name="android:textColorHint">?attr/c_txt_topic_comment_item_time</item>
+    </style>
+
+    <style name="TV_title_bar_right">
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/z_btn_title_bar_bg</item>
+        <item name="android:textColor">?attr/c_txt_home_item_title</item>
+    </style>
+
+    <style name="TV_size_choice_common">
+        <item name="android:background">@drawable/z_btn_txt_size_choice_bg</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/z_btn_txt_size_choice</item>
+    </style>
+
+    <style name="TV_size_choice" parent="TV_size_choice_common">
+        <item name="android:background">@drawable/z_btn_txt_size_choice_bg</item>
+    </style>
+
+    <style name="TV_size_choice_left" parent="TV_size_choice_common">
+        <item name="android:background">@drawable/z_btn_txt_size_choice_bg_left</item>
+    </style>
+
+    <style name="TV_size_choice_right" parent="TV_size_choice_common">
+        <item name="android:background">@drawable/z_btn_txt_size_choice_bg_right</item>
+    </style>
+</resources>
