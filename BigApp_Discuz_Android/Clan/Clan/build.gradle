@@ -22,6 +22,7 @@ dependencies {
     compile project(':EasterEgg')
     compile project(':ZUtilsExt')
     compile project(':ZUtilsExtWidget')
+    compile project(':AppUpdater')
 
 //    compile project(':SwitchButton')
 
@@ -50,18 +51,18 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.youzu.clan"
+        applicationId "com.euyyue.bbs"
         minSdkVersion 9
         targetSdkVersion 21
-        versionCode 8888
-        versionName "1.0.0"
+        versionCode 5
+        versionName "1.0.5"
 //        multiDexEnabled true
 
         manifestPlaceholders = [
                 SHARESDK_CHANNEL: "channel",
                 SHARESDK_APPKEY : "7c2b4bc30b4a",
                 JPUSH_CHANNEL   : "channel",
-                JPUSH_APPKEY    : "b7bf5ec527d73136c7a0944c",
+                JPUSH_APPKEY    : "01755a3052151129fcea8ceb",
         ]
 
     }
@@ -81,6 +82,8 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/maven/com.nostra13.universalimageloader/universal-image-loader/pom.properties'
+        exclude 'META-INF/maven/com.nostra13.universalimageloader/universal-image-loader/pom.xml'
 //        exclude 'lib/arm64-v8a/libgif.so'
     }
 
@@ -97,10 +100,10 @@ android {
     //签名
     signingConfigs {
         release {
-            storeFile file("demokey.keystore")
-            storePassword "123456"
-            keyAlias "demokey.keystore"
-            keyPassword "123456"
+            storeFile file("euyyue.keystore")
+            storePassword "1qaz2wsx"
+            keyAlias "euyyue.keystore"
+            keyPassword "1qaz2wsx"
         }
     }
 
@@ -114,7 +117,7 @@ android {
 
     productFlavors {
         clan {
-            applicationId "com.youzu.clan"
+            applicationId "com.euyyue.bbs"
         }
     }
 

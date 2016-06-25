@@ -31,7 +31,7 @@
     <!-- 底色 -->
     <color name="background">#fff3f3f3</color>
     <!-- 标题栏背景 -->
-    <color name="bg_title">#ff325376</color>
+    <color name="bg_title">#67A963</color>
     <!-- 模块背景 -->
     <color name="bg_module">#ffffffff</color>
 

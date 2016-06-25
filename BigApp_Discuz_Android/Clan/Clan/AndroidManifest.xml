@@ -459,7 +459,7 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.youzu.clan" />
+                <category android:name="com.euyyue.bbs" />
             </intent-filter>
         </activity>
         <!-- Required  SDK核心功能-->
@@ -490,9 +490,14 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
-                <category android:name="com.youzu.clan" />
+                <category android:name="com.euyyue.bbs" />
             </intent-filter>
         </service>
+
+        <!-- 自动更新功能-->
+        <service
+            android:name="com.loveplusplus.update.DownloadService"
+            android:exported="true" />
 
 
         <!-- Required SDK核心功能-->
@@ -503,7 +508,7 @@
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
                 <!--Required  显示通知栏 -->
-                <category android:name="com.youzu.clan" />
+                <category android:name="com.euyyue.bbs" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -577,11 +582,11 @@
 
     <!-- Required 自定义用来收发消息的相关权限 -->
     <permission
-        android:name="com.youzu.clan.permission.JPUSH_MESSAGE"
+        android:name="com.euyyue.bbs.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <!-- Required  一些系统要求的权限，如访问网络等-->
-    <uses-permission android:name="com.youzu.clan.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.euyyue.bbs.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

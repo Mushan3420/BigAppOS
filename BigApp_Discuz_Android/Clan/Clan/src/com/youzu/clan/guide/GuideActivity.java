@@ -16,6 +16,7 @@ import com.kit.utils.ListUtils;
 import com.kit.utils.MessageUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.widget.numberprogressbar.NumberProgressBar;
+import com.loveplusplus.update.UpdateChecker;
 import com.youzu.android.framework.JsonUtils;
 import com.youzu.android.framework.view.annotation.ContentView;
 import com.youzu.android.framework.view.annotation.ViewInject;
@@ -48,6 +49,8 @@ import com.youzu.clan.base.util.theme.ThemeUtils;
 import com.youzu.clan.main.base.forumnav.DBForumNavUtils;
 
 import java.util.List;
+
+import cn.jpush.android.api.JPushInterface;
 
 @ContentView(R.layout.activity_guide)
 public class GuideActivity extends BaseActivity {
@@ -163,6 +166,9 @@ public class GuideActivity extends BaseActivity {
 
         InitUtils.initShareSDK(getApplicationContext());
 
+        // initialize the JPush
+        JPushInterface.init(getApplicationContext());
+
         //初始化广告配置
         InitUtils.initConfig(GuideActivity.this, new DoSomeThing() {
             @Override
@@ -174,6 +180,9 @@ public class GuideActivity extends BaseActivity {
 
         mImageView.setImageResource(R.drawable.splash);
         progressBar();
+
+        //check for APP update.
+        UpdateChecker.checkForNotification(this,"https://bbs.euyyue.com/version.php");
     }
 
     @Override

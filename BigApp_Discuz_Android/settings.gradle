@@ -15,6 +15,7 @@ include ':EasterEgg'
 include ':ZUtils'
 include ':ZUtilsExt'
 include ':ZUtilsExtWidget'
+include ':AppUpdater'
 //include ':SwitchButton'
 include ':Clan'
 project(':Clan').projectDir = new File('Clan/Clan')
@@ -33,3 +34,4 @@ project(':EasterEgg').projectDir = new File('libs/EasterEgg')
 project(':ZUtilsExtWidget').projectDir = new File('libs/ZUtilsExtWidget')
 project(':ZUtilsExt').projectDir = new File('libs/ZUtilsExt')
 project(':ZUtils').projectDir = new File('libs/ZUtils')
+project(':AppUpdater').projectDir = new File('libs/AppUpdater')

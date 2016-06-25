@@ -2,10 +2,10 @@
 <resources>
 
     <string name="build_type">RELEASE</string>
-    <string name="version_name">1.0.0</string>
-    <integer name="version_code">8888</integer>
+    <string name="version_name">1.0.5</string>
+    <integer name="version_code">5</integer>
     <!-- 内部版本 -->
-    <integer name="version_zhao">99999</integer>
+    <integer name="version_zhao">5</integer>
 
     <!-- 网上上传appicon之后的icon路径，分享的时候默认使用的网络icon路径，-->
     <string name="icon_net_url">http://www.discuz.net/static/image/common/logo.png</string>
@@ -21,7 +21,7 @@
     <string name="custom_theme">1</string>
 
     <!-- api地址 ：您的站点地址 + api/mobile/iyz_index.php-->
-    <string name="api_url">http://bbs.bigappdemo.com/api/mobile/iyz_index.php</string>
-    <string name="api_url_base">http://bbs.bigappdemo.com/</string>
+    <string name="api_url">http://bbs.euyyue.com/api/mobile/iyz_index.php</string>
+    <string name="api_url_base">http://bbs.euyyue.com/</string>
     <string name="api_url_path">api/mobile/iyz_index.php</string>
 </resources>
