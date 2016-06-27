@@ -3,12 +3,12 @@
 
     <string name="build_type">RELEASE</string>
     <string name="version_name">1.0.5</string>
-    <integer name="version_code">5</integer>
+    <integer name="version_code">11509</integer>
     <!-- 内部版本 -->
-    <integer name="version_zhao">5</integer>
+    <integer name="version_zhao">11509</integer>
 
     <!-- 网上上传appicon之后的icon路径，分享的时候默认使用的网络icon路径，-->
-    <string name="icon_net_url">http://www.discuz.net/static/image/common/logo.png</string>
+    <string name="icon_net_url">http://bbs.euyyue.com/100.png</string>
 
     <!-- 是否启用分享功能，1代表启用，其它代表不启用 -->
     <string name="is_use_share">1</string>
