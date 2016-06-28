@@ -54,13 +54,13 @@ android {
         applicationId "com.euyyue.bbs"
         minSdkVersion 9
         targetSdkVersion 21
-        versionCode 5
-        versionName "1.0.5"
+        versionCode 11509
+        versionName "1.0.6"
 //        multiDexEnabled true
 
         manifestPlaceholders = [
                 SHARESDK_CHANNEL: "channel",
-                SHARESDK_APPKEY : "7c2b4bc30b4a",
+                SHARESDK_APPKEY : "145814a7b72f9",
                 JPUSH_CHANNEL   : "channel",
                 JPUSH_APPKEY    : "01755a3052151129fcea8ceb",
         ]

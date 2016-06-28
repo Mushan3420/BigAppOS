@@ -84,12 +84,12 @@
 #define KimageJpg @"imagejpg"
 #define Kimagejpeg @"imagejpeg"
 //带有错误日志上传的key
-#define K_APPKEY_ShareSDK @"8d898baf2e52"
+#define K_APPKEY_ShareSDK @"14581a33f91e0"
 
-#define K_APPSECRET_ShareSDK @"09d2f853a68b58707acdd9205ddd7ca0"
+#define K_APPSECRET_ShareSDK @"b4ce382cf829c166b22b6a825ccae48c"
 
 
-#define K_APPKEY_WEIXIN @"wx4868b35061f87885"
-#define K_APPSECRET_WEIXIN @"64020361b8ec4c99936c0e3999a9f249"
+#define K_APPKEY_WEIXIN @"wxd0baaade6c032883"
+#define K_APPSECRET_WEIXIN @"6d0db2c95ffdc493773b05b50c5b3b09"
 
 #endif
